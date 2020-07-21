@@ -5,8 +5,8 @@ print ("")
 print(""" To Friday String Generator By StarkGang""")
 print("""Kindly Enter Your Details To Continue ! """)
 
-API_KEY = '1754367'
-API_HASH = "231b8cc6cca12ee51a85cf543321f476"
+API_KEY = '1535063'
+API_HASH = "eb550474d5d9ccfa8f18c99128e1ac16"
 while True:
   try:
    with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
