@@ -121,8 +121,8 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : {afk_since}" + \
-            f"\n\n__Kindly Leave A Message__ ! \n`He Will Reply To You Soon !`" \
+        message_to_reply = f"__سيدي ѕᴀѕᴋᴇ ʟ̤ɾʅ丂ɹɹɹȊɹɹɹ قد ذهب 🌝🌿 منذ__ {total_afk_time}\nاين هو الان 😑؟: ~~وحده الله يعلم~~ 🌝🌿 " + \
+            f"\n\n__أعدك بأنني سأعود بعد بضع سنوات ضوئية ☃️🔥__\n**رساله من سيدي**: {reason}" \
             if reason \
             else f"**Hello, Boss Is AFK Right Now And May Be Forgot List Reason ! Any Way He Will Come Back Soon !**"
         msg = await event.reply(message_to_reply)
