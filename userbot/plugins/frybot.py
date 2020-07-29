@@ -24,7 +24,7 @@ async def _(event):
     await event.edit("```Processing```")
     async with borg.conversation(chat) as conv:
           try:     
-              response = conv.wait_event(events.NewMessage(incoming=True,from_users=432858024))
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=367810114))
               await borg.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
