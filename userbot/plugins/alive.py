@@ -1,5 +1,4 @@
 """Check if userbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-#IMG CREDITS: @WhySooSerious
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -7,24 +6,14 @@ from platform import uname
 from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No Name set yet.** [Check Guide.](https://how2techy.com/xtra-guide1/)"
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-ALIVE_IMG = "https://telegra.ph/file/5fbacbbc038bb7fac6704.jpg"
-ALIVE_caption = "`FRIDAY IS:` **ONLINE**\n\n"
-ALIVE_caption += "**SYSTEM STATUS**\n\n"
-ALIVE_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n\n"
-ALIVE_caption += "`DATABASE STATUS:` **Functional**\n\n"
-ALIVE_caption += "**Current Branch** : `master`\n\n"
-ALIVE_caption += "**Friday OS** : `3.14`\n\n"
-ALIVE_caption += "**Current Sat** : `StarkGangSat-2.25`\n\n"
-ALIVE_caption += f"**My Boss** : {DEFAULTUSER} \n\n"
-ALIVE_caption += "**Heroku Database** : `AWS - Working Properly`\n\n"
-ALIVE_caption += "**License** : [MIT Licence](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n\n"
-ALIVE_caption += "Copyright By [StarkGang@Github](GitHub.com/StarkGang)\n\n"
-ALIVE_caption += "[Deploy FridayUserbot](https://telegra.ph/FRIDAY-06-15)"
-#@command(outgoing=True, pattern="^.alive$")
-@borg.on(admin_cmd(pattern=r"alive"))
+@command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.delete() 
-    await borg.send_file(alive.chat_id, ALIVE_IMG,caption=ALIVE_caption)
+    await alive.edit("`Currently Alive, my saske master!` **ᓚᘏᗢ**\n\n"
+                     "`Telethon version: 6.9.0\nPython: 3.7.3\n`"
+                     # Don't change this else you a TikTok loser, Son of Jinping. Add your own.
+                     "`Bot created by:` [Dragon](tg://user?id=367810114), @SASKE_89\n"
+                     f"`My peru owner`: {DEFAULTUSER}\n\n"
+                     "• َ𝒊 𝒍𝒐𝒗𝒆 𝒉𝒐𝒏𝒆𝒚 𝒔𝒐 𝒎𝒖𝒄𝒉 | 🍓🍯✨")
